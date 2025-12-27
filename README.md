@@ -1,52 +1,53 @@
 # ZeroAds-YouTube 🚫📺
 
-**ZeroAds-YouTube**, YouTube reklamlarını engellemek yerine onları **milisaniyeler içinde geçmeyi** hedefleyen ultra hafif bir Chrome eklentisidir.
+**ZeroAds-YouTube** is an ultra-lightweight Chrome extension designed to **skip ads in milliseconds** rather than blocking them entirely.
 
-Geleneksel reklam engelleyicilerin aksine, reklamın tamamen yüklenmesini engellemeye çalışmaz (bu YouTube'un anti-adblock sistemlerine takılabilir). Bunun yerine, **reklam başladığı anda**:
-1.  Videoyu **16x hıza** alır (reklam göz açıp kapayıncaya kadar biter). ⏩
-2.  Sesi kapatır (**Mute**). 🔇
-3.  Varsa **"Reklamı Geç"** butonuna otomatik tıkla.
+Unlike traditional ad blockers, it does not attempt to prevent the ad from loading (which can trigger YouTube's anti-adblock detection). Instead, **the moment an ad starts**:
+1.  It speeds up the video to **16x** (the ad finishes in the blink of an eye). ⏩
+2.  It mutes the audio instantly (**Mute**). 🔇
+3.  It automatically clicks the **"Skip Ad"** button if available.
 
-Bu sayede YouTube "reklam izlendi" sanır ama siz reklamı fark etmezsiniz bile.
+This way, YouTube registers the ad as "watched," but you won't even notice it.
 
-## 🚀 Özellikler
+## 🚀 Features
 
--   **Ultra Hafif**: React, Vue vb. ağır kütüphaneler yok. Saf TypeScript.
--   **Agresif Hızlandırma**: 16.0x oynatma hızı.
--   **Tespit Edilemezlik**: DOM manipülasyonu minimum seviyededir.
--   **Gizlilik**: Hiçbir veri toplamaz, sadece YouTube üzerinde çalışır.
+-   **Ultra Lightweight**: No heavy libraries like React or Vue. Pure TypeScript/Vanilla JS.
+-   **Aggressive Acceleration**: Forces 16.0x playback speed on ads.
+-   **Undetectable**: Minimal DOM manipulation to avoid detection.
+-   **Privacy**: Does not collect any data; runs locally on your browser.
 
-## 📦 Kurulum (Geliştirici Modu)
+## 📦 Installation (Developer Mode)
 
-Bu eklenti henüz Chrome Web Mağazası'nda yayınlanmamıştır. Manuel olarak yükleyebilirsiniz:
+This extension is not yet published on the Chrome Web Store. You can install it manually:
 
-1.  Bu projeyi indirin veya kopyalayın.
-2.  `dist` klasörünün olduğundan emin olun (Eğer yoksa `npm install` ve `npm run build` komutlarını çalıştırın).
-3.  Chrome'da `chrome://extensions` adresine gidin.
-4.  Sağ üstteki **Developer mode (Geliştirici modu)** anahtarını açın.
-5.  **Load unpacked (Paketlenmemiş öğe yükle)** butonuna tıklayın.
-6.  Projenin içindeki **`dist`** klasörünü seçin.
+1.  Clone or download this repository.
+2.  Ensure the `dist` folder exists (if not, run `npm install` and `npm run build`).
+3.  Open Chrome and go to `chrome://extensions`.
+4.  Enable **Developer mode** in the top right corner.
+5.  Click **Load unpacked**.
+6.  Select the **`dist`** folder inside the project directory.
 
-### Gizli Sekmede Kullanım
-Gizli sekmede de çalışması için:
-1.  `chrome://extensions` sayfasında eklentinin **Details** butonuna tıklayın.
-2.  **Allow in Incognito** seçeneğini aktif edin.
+### Enabling in Incognito Mode
+To use the extension in Incognito (Private) windows:
+1.  Go to the `chrome://extensions` page.
+2.  Click the **Details** button on the **ZeroAds YouTube** card.
+3.  Scroll down and toggle **Allow in Incognito** to ON.
 
-## 🛠️ Geliştirme
+## 🛠️ Development
 
-Projeyi geliştirmek isterseniz:
+If you want to contribute or modify the code:
 
 ```bash
-# Bağımlılıkları yükle
+# Install dependencies
 npm install
 
-# Geliştirme modu (dosya değişikliklerini izler)
+# Development mode (watches for file changes)
 npm run dev
 
-# Projeyi derle (dist klasörünü oluşturur)
+# Build the project (creates the dist folder)
 npm run build
 ```
 
-## 📜 Lisans
+## 📜 License
 
-MIT License. Özgürce dağıtabilir ve değiştirebilirsiniz.
+MIT License. Feel free to use and modify.
