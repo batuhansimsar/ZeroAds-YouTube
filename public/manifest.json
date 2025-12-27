@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "ZeroAds YouTube",
+    "version": "1.0.0",
+    "description": "Aggressively skips YouTube ads by speeding them up to 16x and muting audio.",
+    "permissions": [
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://*.youtube.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "action": {
+        "default_popup": "src/popup/index.html",
+        "default_title": "ZeroAds Settings"
+    }
+}
